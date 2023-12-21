@@ -1,0 +1,26 @@
+plugins {
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+javafx {
+	version = "15.0.1"
+	modules = ['javafx.controls']
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
+
+mainClassName = "Exercise_10"
